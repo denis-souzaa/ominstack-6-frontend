@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg';
 
 import api from '~/services/api';
 
-export default function Main() {
+export default function Main(props) {
   const [state, setState] = useState({
     newBox: '',
   });
@@ -14,6 +14,9 @@ export default function Main() {
     const response = await api.post('boxes', {
       title: state.newBox,
     });
+
+    props.history.push(`/box/${response.data._id}`);
+
   };
 
   const handleInputChange = (e) => {

@@ -13,6 +13,10 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "react/prop-types": [
+      "enabled",
+      { "ignore": "ignore", "customValidators": "customValidator" }
+    ],
 		"import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "global-require": "off",
     "import/prefer-default-export": "off",
